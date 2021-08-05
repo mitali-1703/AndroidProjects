@@ -5,4 +5,4 @@ Its a very basic app containing two buttons and clicking on them gives log messa
 ## Preview of the app:-
 <img src="https://user-images.githubusercontent.com/66427936/128353734-d3c0f30c-7582-4490-807d-287895ba36f3.jpeg" width="250" height="450">
 
-[APK](https://github.com/mitali-1703/AndroidProjects/releases/download/final/app-debug.apk) of the app is here.
+[APK](https://github.com/mitali-1703/AndroidProjects/releases/download/project2/app-debug.apk) of the app is here.
