@@ -17,6 +17,7 @@
         android:paddingVertical="10dp"
         android:text="LOGIN"
         android:textSize="18sp"
+        android:onClick="login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -34,6 +35,7 @@
         android:paddingVertical="10dp"
         android:text="Sign Up"
         android:textSize="18sp"
+        android:onClick="signup"
         app:layout_constraintEnd_toEndOf="@+id/button"
         app:layout_constraintStart_toStartOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/button" />

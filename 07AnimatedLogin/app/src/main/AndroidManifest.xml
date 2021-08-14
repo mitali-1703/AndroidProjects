@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AnimatedLogin">
+        <activity
+            android:name=".Status"
+            android:label="Status" />
+        <activity android:name=".Signup"
+            android:label="SignUp Page"/>
+        <activity android:name=".Login"
+            android:label="Login Page"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
