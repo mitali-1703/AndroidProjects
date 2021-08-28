@@ -33,7 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.textView);
         button = findViewById(R.id.button);
-        requestQueue = Volley.newRequestQueue(this);
+//        requestQueue = Volley.newRequestQueue(this);
+/*-----------------Used VolleySingleton below to have only-n-only 1 instance of our request so that it isn't recreated
+                    everytime when our activity is recreated and also to have synchronized tasks-----------------------*/
+        requestQueue = VolleySingleton.getInstance(this).getRequestQueue();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
