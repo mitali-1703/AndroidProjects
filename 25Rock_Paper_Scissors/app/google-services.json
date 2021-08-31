@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "9682628065",
+    "firebase_url": "https://online-game-7f170-default-rtdb.firebaseio.com",
+    "project_id": "online-game-7f170",
+    "storage_bucket": "online-game-7f170.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9682628065:android:e1ff0ebfac7ca8f6ecf6a0",
+        "android_client_info": {
+          "package_name": "com.example.android.rockpaperscissors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9682628065-4veddfftr3tpe2pld5rutv7uqq1d558p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZwbcJZtvVieEjGcRVd-Q9NcT6Sw_2sz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9682628065-4veddfftr3tpe2pld5rutv7uqq1d558p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
