@@ -40,6 +40,7 @@
             android:layout_weight="1"
             android:layout_marginHorizontal="4dp"
             android:text="rock"
+            android:onClick="Rock"
             android:textSize="18sp"
             app:backgroundTint="#3F51B5"/>
 
@@ -50,6 +51,7 @@
             android:layout_weight="1"
             android:layout_marginHorizontal="4dp"
             android:text="paper"
+            android:onClick="Paper"
             android:textSize="18sp"
             app:backgroundTint="#ED286B"/>
 
@@ -60,6 +62,7 @@
             android:layout_weight="1"
             android:layout_marginHorizontal="4dp"
             android:text="scissors"
+            android:onClick="Scissors"
             android:textSize="18sp"
             app:backgroundTint="#08628A"/>
     </LinearLayout>
