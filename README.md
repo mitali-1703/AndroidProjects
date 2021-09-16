@@ -4,7 +4,11 @@ The UI of the apps may not be appealing to the eyes so try ignoring that part :s
 
 Here's the list of my projects with their respective APK so feel free to run them on your device-->
 * [01ProjectHello](https://github.com/mitali-1703/AndroidProjects/tree/proj1) [APK](https://github.com/mitali-1703/AndroidProjects/releases/download/project1/app-debug.apk)
-* [02ProjectButton](https://github.com/mitali-1703/AndroidProjects/tree/proj2) [APK]()
-* [03ProjectToast](https://github.com/mitali-1703/AndroidProjects/tree/proj3) [APK]()
-* [04ProjectGradle](https://github.com/mitali-1703/AndroidProjects/tree/proj4) [APK]()
-* [05DiceRoller](https://github.com/mitali-1703/AndroidProjects/tree/proj5) [APK]()
+* [02ProjectButton](https://github.com/mitali-1703/AndroidProjects/tree/proj2) [APK](https://github.com/mitali-1703/AndroidProjects/releases/download/project2/app-debug.apk)
+* [03ProjectToast](https://github.com/mitali-1703/AndroidProjects/tree/proj3) [APK](https://github.com/mitali-1703/AndroidProjects/releases/download/project3/app-debug.apk)
+* [04ProjectGradle](https://github.com/mitali-1703/AndroidProjects/tree/proj4) [APK](https://github.com/mitali-1703/AndroidProjects/releases/download/project4/app-debug.apk)
+* [05DiceRoller](https://github.com/mitali-1703/AndroidProjects/tree/proj5) [APK](https://github.com/mitali-1703/AndroidProjects/releases/download/project5/app-debug.apk)
+* [06FunBackground](https://github.com/mitali-1703/AndroidProjects/tree/proj6) [APK](https://github.com/mitali-1703/AndroidProjects/releases/download/project6/app-debug.apk)
+* [08CustomButton](https://github.com/mitali-1703/AndroidProjects/tree/proj8) [APK](https://github.com/mitali-1703/AndroidProjects/releases/download/project8/app-debug.apk)
+* [09TruthDareGame](https://github.com/mitali-1703/AndroidProjects/tree/proj9) [APK](https://github.com/mitali-1703/AndroidProjects/releases/download/project9/app-debug.apk)
+* [10AutoComplete](https://github.com/mitali-1703/AndroidProjects/tree/proj10) [APK](https://github.com/mitali-1703/AndroidProjects/releases/download/project10/app-debug.apk)
