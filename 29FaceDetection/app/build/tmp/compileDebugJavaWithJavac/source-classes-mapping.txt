@@ -1,4 +1,0 @@
-com/example/android/facedetection/MainActivity.java
- com.example.android.facedetection.MainActivity
-com/example/android/facedetection/BuildConfig.java
- com.example.android.facedetection.BuildConfig
