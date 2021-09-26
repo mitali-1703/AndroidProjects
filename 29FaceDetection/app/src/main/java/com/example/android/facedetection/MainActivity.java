@@ -35,4 +35,76 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        //Checking requestCode if it matches with our app's requestCode or not coz there might be other apps which may use
+        // camera too and also checking resultCode coz it might be possible that the user just opens and closes the app without
+        // clicking the open camera button
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK){
+
+            //Using bundle coz the image captured will be sent in bitmap format in the vision library and as bitmap is a
+            // collection of data containing many strings,ints etc we need to bind that data together using bundle
+            Bundle extras = data.getExtras();
+            Bitmap bitmap = (Bitmap) extras.get("data");
+            detectFace(bitmap);
+        }
+    }
+
+    private void detectFace(Bitmap bitmap) {
+        // High-accuracy landmark detection and face classification
+        FaceDetectorOptions highAccuracyOpts =
+                new FaceDetectorOptions.Builder()
+                        .setPerformanceMode(FaceDetectorOptions.PERFORMANCE_MODE_ACCURATE)
+                        .setLandmarkMode(FaceDetectorOptions.LANDMARK_MODE_ALL)
+                        .setClassificationMode(FaceDetectorOptions.CLASSIFICATION_MODE_ALL)
+                        .setMinFaceSize(0.15f)
+                        .enableTracking()
+                        .build();
+
+        try {
+            //To create an InputImage object from a Bitmap object
+            //The image is represented by a Bitmap object together with rotation degrees.
+            image = InputImage.fromBitmap(bitmap,0);
+
+            //Get an instance of FaceDetector
+            detector = FaceDetection.getClient(highAccuracyOpts);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        detector.process(image).addOnSuccessListener(new OnSuccessListener<List<Face>>() {
+            @Override
+            public void onSuccess(List<Face> faces) {
+                String resultText = "";
+
+                //Integer i if there are more than 1 faces in the List
+                int i = 1;
+
+                //Looping thru the list named faces using for each loop
+                for (Face face:faces) {
+                    resultText = resultText.concat("\n"+i+".")
+                            .concat("\nSmile: "+face.getSmilingProbability()*100+"%")
+                            .concat("\nLeft Eye: "+face.getLeftEyeOpenProbability()*100+"%")
+                            .concat("\nRight Eye: "+face.getRightEyeOpenProbability()*100+"%");
+                    i++;
+                }
+
+                if (faces.size() == 0)
+                    Toast.makeText(MainActivity.this, "NO FACES", Toast.LENGTH_SHORT).show();
+                else{
+                    Bundle bundle = new Bundle();
+                    bundle.putString(com.example.android.facedetection.FaceDetection.RESULT_TEXT,resultText);
+                    DialogFragment resultDialog = new ResultDialog();
+                    resultDialog.setArguments(bundle);
+                    resultDialog.setCancelable(false);
+                    resultDialog.show(getSupportFragmentManager(), com.example.android.facedetection.FaceDetection.RESULT_DIALOG);
+                }
+
+            }
+        });
+
+    }
 }
