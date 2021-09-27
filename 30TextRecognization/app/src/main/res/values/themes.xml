@@ -1,9 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.TextRecognition" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.TextRecognition" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="windowNoTitle">false</item>
+        <item name="android:windowTitleSize">100dp</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="android:windowActionBar">true</item>
+
+        <item name="colorPrimary">#22CB5C</item>
+        <item name="colorPrimaryVariant">#1FAA59</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
