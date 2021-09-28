@@ -24,6 +24,8 @@ public class ResultActivity extends AppCompatActivity {
         //Getting text recognized by TextDetection's RESULT_TEXT into ResultActivity using intent
         resultText = getIntent().getStringExtra(TextDetection.RESULT_TEXT);
 
+        resultTextView.setText(resultText);
+
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
