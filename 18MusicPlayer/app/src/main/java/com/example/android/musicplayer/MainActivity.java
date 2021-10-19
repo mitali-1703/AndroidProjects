@@ -15,6 +15,8 @@ import java.util.TimerTask;
 public class MainActivity extends AppCompatActivity {
 
     MediaPlayer mediaPlayer;
+    
+    // AudioManager provides access to volume and ringer mode control.
     AudioManager audioManager;
 
     public void playMe(View v){
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         mediaPlayer = MediaPlayer.create(this,R.raw.testaudio);
 
+        //Get context from audio service
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
         int currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         volumeRocker.setMax(maxVolume);
         volumeRocker.setProgress(currentVolume);
 
+        //Set a listener on volumeRocker
         volumeRocker.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -65,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
         timeLine.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                
+                //seekTo is for wherever I push the seekbar just go on there
                 mediaPlayer.seekTo(progress);
             }
 
@@ -79,9 +85,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Customize the timeline seekbar
         new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
+                
+                //Setting the progress of timeline seekbar for every sec w/o any delay
+                // to the current position of mediaPlayer
                 timeLine.setProgress(mediaPlayer.getCurrentPosition());
             }
         }, 0, 1000);
