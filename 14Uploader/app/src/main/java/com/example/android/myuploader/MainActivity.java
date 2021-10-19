@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void fakeProgress(int progress){
         progressBarHorizontal.setProgress(progress);
+        
+        //Thread used to execute the progress of HorizontalProgressBar by 10 after every 1sec of sleep
+        
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
